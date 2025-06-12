@@ -1,0 +1,177 @@
+.container {
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FF6B6B20, #4ECDC420, #45B7D120, #96E6A120),
+              radial-gradient(circle at top left, #FF6B6B40, transparent 50%),
+              radial-gradient(circle at bottom right, #96E6A140, transparent 50%);
+  backdrop-filter: blur(100px);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+  background: rgba(255, 99, 71, 0.1);
+  border: 1px solid rgba(255, 99, 71, 0.3);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 2rem;
+}
+
+.loadingIcon {
+  font-size: 1.5rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mapContainer {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.shopList {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+}
+
+.shopList h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.shopGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.shopCard {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shopCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.shopCard h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.shopCard p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.infoWindow {
+  padding: 0.5rem;
+  min-width: 200px;
+}
+
+.infoWindow h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.infoWindow p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .mapContainer {
+    border-radius: 16px;
+    padding: 0.5rem;
+  }
+
+  .shopList {
+    padding: 1rem;
+  }
+
+  .shopGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .shopCard {
+    padding: 1rem;
+  }
+
+  .shopCard h3 {
+    font-size: 1.1rem;
+  }
+} 

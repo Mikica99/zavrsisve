@@ -1,0 +1,53 @@
+.backButton {
+  position: fixed;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--glass-background);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  color: var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.backButton:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: var(--shadow-md);
+}
+
+.backButton:active {
+  transform: translateY(0);
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+.text {
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .backButton {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+  
+  .text {
+    display: none; /* Hide text on mobile, show only icon */
+  }
+  
+  .icon {
+    font-size: 1.4rem; /* Make icon slightly bigger on mobile */
+  }
+} 
