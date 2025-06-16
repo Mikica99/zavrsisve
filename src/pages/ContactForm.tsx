@@ -35,7 +35,6 @@ const ContactForm = () => {
 
       const templateParams = {
         to_name: 'Zavrsisve Admin',
-        to_email: 'zavrsisve@gmail.com',
         from_name: `${formData.name} ${formData.surname}`,
         from_email: formData.email,
         message: formData.message,
