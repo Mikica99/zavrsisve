@@ -1,9 +1,9 @@
 .container {
   padding: 2rem;
   min-height: 100vh;
-  background: linear-gradient(135deg, #FF6B6B20, #4ECDC420, #45B7D120, #96E6A120),
-              radial-gradient(circle at top left, #FF6B6B40, transparent 50%),
-              radial-gradient(circle at bottom right, #96E6A140, transparent 50%);
+  background: linear-gradient(135deg, #2C3E5020, #34495E20, #8E44AD20, #9B59B620),
+              radial-gradient(circle at top right, #8E44AD40, transparent 50%),
+              radial-gradient(circle at bottom left, #2C3E5040, transparent 50%);
   backdrop-filter: blur(100px);
   position: relative;
   z-index: 1;
@@ -15,9 +15,13 @@
   color: #fff;
   text-align: center;
   margin-bottom: 2rem;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
+  background: linear-gradient(45deg, #E74C3C, #9B59B6, #3498DB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Filters */
@@ -39,22 +43,23 @@
 }
 
 .dropdown {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
+  background: rgba(44, 62, 80, 0.3);
+  border: 1px solid rgba(142, 68, 173, 0.4);
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(20px);
   overflow: visible;
   position: relative;
   z-index: 15;
+  box-shadow: 0 4px 20px rgba(142, 68, 173, 0.2);
 }
 
 .dropdown:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(44, 62, 80, 0.4);
+  border-color: rgba(142, 68, 173, 0.6);
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(142, 68, 173, 0.3);
 }
 
 .dropdownHeader {
@@ -70,7 +75,8 @@
 .dropdownLabel {
   font-weight: 600;
   font-size: 0.9rem;
-  opacity: 0.8;
+  opacity: 0.9;
+  color: #E74C3C;
 }
 
 .dropdownValue {
@@ -85,6 +91,7 @@
   font-size: 0.8rem;
   transition: transform 0.3s ease;
   opacity: 0.7;
+  color: #9B59B6;
 }
 
 .dropdownArrow.rotated {
@@ -96,14 +103,14 @@
   top: 100%;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.98);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+  background: rgba(44, 62, 80, 0.95);
+  border: 1px solid rgba(142, 68, 173, 0.4);
+  border-radius: 16px;
   max-height: 200px;
   overflow-y: auto;
   animation: slideDown 0.3s ease;
   z-index: 1000;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(20px);
   margin-top: 4px;
 }
@@ -126,27 +133,27 @@
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  color: #333;
+  color: #fff;
   position: relative;
   z-index: 1001;
 }
 
 .dropdownItem:hover {
-  background: rgba(255, 107, 107, 0.1);
+  background: rgba(142, 68, 173, 0.2);
 }
 
 .dropdownItem:first-child {
-  border-radius: 12px 12px 0 0;
+  border-radius: 16px 16px 0 0;
 }
 
 .dropdownItem:last-child {
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 16px 16px;
 }
 
 .dropdownCheckbox {
   width: 16px;
   height: 16px;
-  accent-color: #FF6B6B;
+  accent-color: #E74C3C;
   cursor: pointer;
   position: relative;
   z-index: 1002;
@@ -161,46 +168,24 @@
 
 .clearFiltersButton {
   padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, #FF6B6B, #ee5a52);
+  background: linear-gradient(135deg, #E74C3C, #C0392B);
   border: none;
-  border-radius: 16px;
+  border-radius: 20px;
   color: white;
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(20px);
-  box-shadow: 0 4px 16px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 4px 16px rgba(231, 76, 60, 0.3);
   position: relative;
   z-index: 10;
 }
 
 .clearFiltersButton:hover {
-  background: linear-gradient(135deg, #ee5a52, #e74c3c);
+  background: linear-gradient(135deg, #C0392B, #A93226);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 107, 107, 0.4);
-}
-
-.filterSelect {
-  padding: 0.75rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  font-size: 1rem;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-.filterSelect:focus {
-  outline: none;
-  border-color: rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.filterSelect option {
-  background: #333;
-  color: #fff;
+  box-shadow: 0 8px 24px rgba(231, 76, 60, 0.4);
 }
 
 .noResults {
@@ -212,98 +197,67 @@
   z-index: 2;
 }
 
-.error {
-  background: rgba(255, 99, 71, 0.1);
-  border: 1px solid rgba(255, 99, 71, 0.3);
-  color: #fff;
-  padding: 1rem;
-  border-radius: 12px;
-  text-align: center;
-  margin-bottom: 2rem;
-  backdrop-filter: blur(10px);
-}
-
-.loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 2rem;
-}
-
-.loadingIcon {
-  font-size: 1.5rem;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.mapContainer {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.shopList {
-  background: rgba(255, 255, 255, 0.1);
+.photographerList {
+  background: rgba(44, 62, 80, 0.2);
   border-radius: 24px;
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(142, 68, 173, 0.3);
   backdrop-filter: blur(20px);
   position: relative;
   z-index: 2;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-.shopList h2 {
+.photographerList h2 {
   color: #fff;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   text-align: center;
   position: relative;
   z-index: 2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.shopGrid {
+.photographerGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 1.5rem;
   position: relative;
   z-index: 2;
 }
 
-.shopCard {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
+.photographerCard {
+  background: rgba(52, 73, 94, 0.3);
+  border-radius: 20px;
   padding: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(142, 68, 173, 0.3);
   position: relative;
   overflow: hidden;
   z-index: 2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.shopCard:hover {
+.photographerCard:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  background: rgba(52, 73, 94, 0.4);
+  box-shadow: 0 8px 32px rgba(142, 68, 173, 0.3);
+  border-color: rgba(142, 68, 173, 0.5);
 }
 
-.shopHeader {
+.photographerCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #E74C3C, #9B59B6, #3498DB);
+  z-index: 1;
+}
+
+.photographerHeader {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -312,33 +266,44 @@
   z-index: 2;
 }
 
-.shopName {
-  color: #fff;
-  font-size: 1.3rem;
-  margin: 0;
+.photographerInfo {
   flex: 1;
+}
+
+.photographerName {
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.photographerCity {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 .rating {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 215, 0, 0.2);
+  background: rgba(241, 196, 15, 0.2);
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  color: #FFD700;
+  color: #F1C40F;
   font-size: 0.9rem;
   font-weight: 600;
-  border: 1px solid rgba(255, 215, 0, 0.3);
+  border: 1px solid rgba(241, 196, 15, 0.3);
   position: relative;
   z-index: 2;
 }
 
-.shopInfo {
+.photographerDetails {
   margin-bottom: 1rem;
 }
 
-.shopInfo p {
+.photographerDetails p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
@@ -347,15 +312,15 @@
   gap: 0.5rem;
 }
 
-.address, .phone, .website {
+.experience, .phone, .website, .instagram {
   margin: 0;
 }
 
-.priceRange {
+.priceInfo {
   margin-bottom: 1rem;
 }
 
-.priceInfo {
+.priceRange {
   margin-bottom: 1rem;
 }
 
@@ -373,13 +338,13 @@
 }
 
 .priceValue {
-  color: #FFD700;
+  color: #F1C40F;
   font-size: 1rem;
   font-weight: 700;
-  background: rgba(255, 215, 0, 0.1);
+  background: rgba(241, 196, 15, 0.1);
   padding: 0.3rem 0.8rem;
   border-radius: 8px;
-  border: 1px solid rgba(255, 215, 0, 0.3);
+  border: 1px solid rgba(241, 196, 15, 0.3);
 }
 
 .priceTag {
@@ -393,21 +358,21 @@
 }
 
 .povoljno {
-  background: rgba(76, 175, 80, 0.2);
-  color: #4CAF50;
-  border: 1px solid rgba(76, 175, 80, 0.3);
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ECC71;
+  border: 1px solid rgba(46, 204, 113, 0.3);
 }
 
 .srednje {
-  background: rgba(255, 152, 0, 0.2);
-  color: #FF9800;
-  border: 1px solid rgba(255, 152, 0, 0.3);
+  background: rgba(241, 196, 15, 0.2);
+  color: #F1C40F;
+  border: 1px solid rgba(241, 196, 15, 0.3);
 }
 
 .luksuzno {
-  background: rgba(156, 39, 176, 0.2);
-  color: #9C27B0;
-  border: 1px solid rgba(156, 39, 176, 0.3);
+  background: rgba(142, 68, 173, 0.2);
+  color: #9B59B6;
+  border: 1px solid rgba(142, 68, 173, 0.3);
 }
 
 .description {
@@ -435,12 +400,81 @@
 }
 
 .specialtyTag {
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.8);
+  background: rgba(142, 68, 173, 0.2);
+  color: rgba(255, 255, 255, 0.9);
   padding: 0.3rem 0.8rem;
   border-radius: 12px;
   font-size: 0.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(142, 68, 173, 0.3);
+}
+
+/* Load More Button */
+.loadMoreContainer {
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.loadMoreButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #9B59B6, #8E44AD);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 16px rgba(155, 89, 182, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.loadMoreButton:hover {
+  background: linear-gradient(135deg, #8E44AD, #7D3C98);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(155, 89, 182, 0.4);
+}
+
+.loadMoreButton:active {
+  transform: translateY(0);
+}
+
+/* Contact Message */
+.contactMessage {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(44, 62, 80, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(142, 68, 173, 0.2);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 2;
+}
+
+.contactMessage p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contactEmail {
+  color: #E74C3C;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.contactEmail:hover {
+  color: #fff;
+  border-bottom-color: #E74C3C;
+  text-shadow: 0 0 8px rgba(231, 76, 60, 0.5);
 }
 
 /* Modal */
@@ -450,27 +484,25 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
+  z-index: 10000;
   padding: 1rem;
   backdrop-filter: blur(5px);
 }
 
 .modalContent {
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
+  background: rgba(44, 62, 80, 0.95);
+  border-radius: 24px;
   padding: 2rem;
   max-width: 600px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
-  position: relative;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  z-index: 10000;
-  margin: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  z-index: 10001;
 }
 
 .closeButton {
@@ -481,7 +513,7 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #666;
+  color: #E74C3C;
   padding: 0.5rem;
   border-radius: 50%;
   transition: all 0.3s ease;
@@ -489,30 +521,32 @@
 }
 
 .closeButton:hover {
-  background: rgba(0, 0, 0, 0.1);
-  color: #333;
+  background: rgba(231, 76, 60, 0.1);
+  color: #C0392B;
 }
 
 .modalContent h2 {
-  color: #333;
+  color: #fff;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   padding-right: 3rem;
   position: relative;
   z-index: 10001;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .modalInfo {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(52, 73, 94, 0.3);
   padding: 1.5rem;
-  border-radius: 12px;
+  border-radius: 16px;
   margin-bottom: 1.5rem;
   position: relative;
   z-index: 10001;
+  border: 1px solid rgba(142, 68, 173, 0.2);
 }
 
 .modalInfo p {
-  color: #333;
+  color: #fff;
   margin-bottom: 0.8rem;
   font-size: 1rem;
   position: relative;
@@ -520,7 +554,7 @@
 }
 
 .modalInfo a {
-  color: #007bff;
+  color: #3498DB;
   text-decoration: none;
   position: relative;
   z-index: 10001;
@@ -528,11 +562,12 @@
 
 .modalInfo a:hover {
   text-decoration: underline;
+  color: #2980B9;
 }
 
 .modalDescription h3,
 .modalSpecialties h3 {
-  color: #333;
+  color: #fff;
   font-size: 1.3rem;
   margin-bottom: 1rem;
   position: relative;
@@ -540,7 +575,7 @@
 }
 
 .modalDescription p {
-  color: #666;
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   position: relative;
@@ -563,10 +598,11 @@
 }
 
 .callButton,
-.websiteButton {
+.websiteButton,
+.instagramButton {
   padding: 0.8rem 1.5rem;
   border: none;
-  border-radius: 12px;
+  border-radius: 16px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
@@ -579,92 +615,33 @@
 }
 
 .callButton {
-  background: linear-gradient(135deg, #4CAF50, #45a049);
+  background: linear-gradient(135deg, #2ECC71, #27AE60);
   color: white;
 }
 
 .callButton:hover {
-  background: linear-gradient(135deg, #45a049, #3d8b40);
+  background: linear-gradient(135deg, #27AE60, #229954);
   transform: translateY(-2px);
 }
 
 .websiteButton {
-  background: linear-gradient(135deg, #2196F3, #1976D2);
+  background: linear-gradient(135deg, #3498DB, #2980B9);
   color: white;
 }
 
 .websiteButton:hover {
-  background: linear-gradient(135deg, #1976D2, #1565C0);
+  background: linear-gradient(135deg, #2980B9, #21618C);
   transform: translateY(-2px);
 }
 
-/* Contact Message */
-.contactMessage {
-  text-align: center;
-  margin-top: 3rem;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  position: relative;
-  z-index: 2;
-}
-
-.contactMessage p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.contactEmail {
-  color: #FF6B6B;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid transparent;
-}
-
-.contactEmail:hover {
-  color: #fff;
-  border-bottom-color: #FF6B6B;
-  text-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
-}
-
-/* Load More Button */
-.loadMoreContainer {
-  text-align: center;
-  margin: 2rem 0;
-  position: relative;
-  z-index: 2;
-}
-
-.loadMoreButton {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, #4ECDC4, #44A08D);
-  border: none;
-  border-radius: 16px;
+.instagramButton {
+  background: linear-gradient(135deg, #E91E63, #C2185B);
   color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 4px 16px rgba(78, 205, 196, 0.3);
-  position: relative;
-  z-index: 2;
 }
 
-.loadMoreButton:hover {
-  background: linear-gradient(135deg, #44A08D, #3A8B7A);
+.instagramButton:hover {
+  background: linear-gradient(135deg, #C2185B, #AD1457);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(78, 205, 196, 0.4);
-}
-
-.loadMoreButton:active {
-  transform: translateY(0);
 }
 
 /* Responsive Design */
@@ -719,11 +696,11 @@
     padding: 0.875rem 1.25rem;
   }
 
-  .shopList {
+  .photographerList {
     padding: 1rem;
   }
 
-  .shopGrid {
+  .photographerGrid {
     grid-template-columns: 1fr;
   }
 
@@ -737,7 +714,8 @@
   }
 
   .callButton,
-  .websiteButton {
+  .websiteButton,
+  .instagramButton {
     width: 100%;
     justify-content: center;
   }
@@ -770,12 +748,12 @@
     font-size: 1.8rem;
   }
 
-  .shopCard {
+  .photographerCard {
     padding: 1rem;
   }
 
-  .shopName {
-    font-size: 1.1rem;
+  .photographerName {
+    font-size: 1.2rem;
   }
 
   .modalContent {

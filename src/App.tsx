@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import InvitationDesign from './pages/InvitationDesign';
 import ContactForm from './pages/ContactForm';
 import WeddingDresses from './pages/WeddingDresses';
+import Photographers from './pages/Photographers';
 import BackToDashboard from './components/BackToDashboard';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/invitation-design" element={<InvitationDesign />} />
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/wedding-dresses" element={<WeddingDresses />} />
+        <Route path="/photographers" element={<Photographers />} />
       </Routes>
     </Router>
   );

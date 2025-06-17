@@ -45,19 +45,14 @@ const Dashboard = () => {
           </p>
         </div>
 
-        <div className={styles.card}>
+        <div 
+          className={styles.card}
+          onClick={() => navigate('/photographers')}
+        >
           <div className={styles.cardIcon}>📸</div>
           <h2 className={styles.cardTitle}>Zakaži fotografisanje</h2>
           <p className={styles.cardDescription}>
             Rezervišite termin za profesionalno fotografisanje
-          </p>
-        </div>
-
-        <div className={styles.card}>
-          <div className={styles.cardIcon}>🎥</div>
-          <h2 className={styles.cardTitle}>Video usluge</h2>
-          <p className={styles.cardDescription}>
-            Snimanje i montaža video materijala
           </p>
         </div>
       </div>
